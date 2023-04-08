@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 const listId = "f724467473";
 const app = express();
-const port = 3000;
+const port = 3000 || process.env.PORT;
 
 
 app.use(express.static("public"));
@@ -63,7 +63,7 @@ app.use(bodyParser.urlencoded({extended: true}));
           res.redirect("/")
     })
 
-    app.listen(port || process.env.PORT, function(){
-        console.log("server started at port");
+    app.listen(port, function(){
+        console.log("server started at port "+port);
     })
 
