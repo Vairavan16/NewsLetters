@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({extended: true}));
             console.log(mail)
 
             mailchimp.setConfig({
-              apiKey: "3112ccf8dd78ef24c23221e1dd8bc359-us21",
+              apiKey: "54db10a420eada3b89436225007e916f-us21",
               server: "us21"
             });
             
